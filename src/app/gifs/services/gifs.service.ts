@@ -48,6 +48,8 @@ export class GifsService {
 
   saveCountLocalStorage(count: number): void {
     localStorage.setItem('count', count.toString());
+    this.pagination.count = count;
+    this.changePage(0);
   }
 
   searchTag(tag: string):void{
@@ -81,6 +83,7 @@ export class GifsService {
 
     this.http.get<SearchResponse>(`${this.serviceUrl}/search`, { params })
     .subscribe(resp =>{
+      console.log(resp);
       this.gifList = resp.data;
       this.pagination = resp.pagination;
     });
