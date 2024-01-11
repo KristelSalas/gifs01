@@ -1,0 +1,9 @@
+<div class="row">
+  <span class="total">{{pagination.offset + 1}}-{{pagination.offset + pagination.count}} de {{pagination.total_count}}</span>
+</div>
+<div class="row">
+  <button class="btn btn-primary" (click)="getPage(-1)">&#8249;</button>
+  <input type="number" min="1" max="50" value={{pagination.count}} class="page" (change)="updatePageSize()" #pageSizeInput>
+  <button class="btn btn-primary" (click)="getPage(1)">&#8250;</button>
+</div>
+

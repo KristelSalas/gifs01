@@ -1,0 +1,24 @@
+.row {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    gap: 5px;
+    text-align: end;
+}
+
+.btn {
+    width: 30px;
+}
+
+.page {
+    height: 38px;
+    text-align: center;
+    width: 80px;
+}
+
+.total {
+
+}

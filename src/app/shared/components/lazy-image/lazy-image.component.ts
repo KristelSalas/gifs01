@@ -24,4 +24,8 @@ export class LazyImageComponent {
   onLoad():void{
     this.hasLoaded = true;
   }
+
+  ngOnChanges(): void {
+    this.hasLoaded = false;
+  }
 }
